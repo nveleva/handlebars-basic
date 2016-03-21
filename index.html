@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<script id="articles-template"
+			type="text/x-hanglebars-template">
+			<section>
+				{{#articles}}
+				<article id="article-{{id}}" class="article">
+					<h1>{{title}}</h1>
+					<p>{{content}}</p>
+					{{#if postDate}}
+						<span class="date">{{postDate}}</span>
+					{{/if}}
+					<img src="{{imgUrl}}" />
+				</article>
+				{{/articles}}
+			</section>
+	</script>
+
+	<script src="libs/handlebars-v4.0.5.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
