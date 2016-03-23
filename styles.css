@@ -1,0 +1,77 @@
+#wrapper, #articles-content{
+	width: 980px;
+	margin: 10px auto;
+}
+#title{
+	height: 150px;
+	background: url('img/grass.png');
+	position: relative;
+}
+
+#title h1{
+	top: 80px;
+	right: 15px;
+	position: absolute;
+}
+
+img{
+	border: 5px solid #98b237;
+    width: 150px;
+    border-radius: 70px;
+}
+
+h1, p, span{
+	color: #392613;
+}
+
+p{
+	text-indent: 20px;
+	font-size: 18px;
+}
+
+span{
+	display: inline-block;
+	margin-bottom: 15px;
+}
+
+.article:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.article h1{
+	color: #98b237;
+}
+
+.article .img-holder{
+	float: left;
+	width: 30%;
+}
+
+.article .article-right{
+	float: left;
+	width: 70%;
+}
+
+.date{
+	color: blue;
+}
+
+.introduction{
+	margin-top: 10px;
+	background: #CEFFBD;
+	border-radius: 40px;
+	padding: 25px;
+	border: 1px solid green;
+}
+
+.introduction p{
+	margin: 0;
+}
+
+.introduction p:first-letter{
+	color: #98b237;
+	font-size: 48px;
+	font-style: italic;
+}

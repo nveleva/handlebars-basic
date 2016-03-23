@@ -2,25 +2,39 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<title>Растения</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<script id="articles-template"
-			type="text/x-hanglebars-template">
-			<section>
-				{{#articles}}
-				<article id="article-{{id}}" class="article">
-					<h1>{{title}}</h1>
-					<p>{{content}}</p>
-					{{#if postDate}}
-						<span class="date">{{postDate}}</span>
-					{{/if}}
-					<img src="{{imgUrl}}" />
-				</article>
-				{{/articles}}
-			</section>
-	</script>
+	<div id="wrapper">
+		<div id="title">
+			<h1>9 стайни растения пречистващи въздуха</h1>
+		</div>
+		<div class="introduction">
+			<p>Едно живо растение в дома ни може да успокои сетивата ни, но може и да пречисти въздуха в стаята в рамките на 24 часа. Учени от НАСА са установили, че някои стайни растения толкова ефективно поглъщат вредните вещества в затворени помещения, че са предложили те да бъдат част от биологичната животоподдържаща система на бъдещите орбитални станции. Токсините, които се отделят от бои, пластмаси, килими, почистващи разтвори, лепила и различни строителни материали, причиняват редица здравословни проблеми. Сред тях най-вреди са три основни химически съединения: формалдехид (килими, лепила, бои); бензол (пластмаси, изолации, смазочни масла, гума, пестициди); трихлороетилен (разтвортели на бои, препарати за почистване на килими, лепила). НАСА предлага десетина стайни растения, които пречистват въздушната среда, оптимизират влажността и филтрират праха.</p>
+		</div>
+		<script id="articles-template" type="text/hanglebars-template">
+			<div id="articles-content">
+				<section>
+					{{#articles}}
+					<article id="article-{{id}}" class="article">
+						<div class="img-holder">
+							<img src="{{imgUrl}}" />
+						</div>
+						<div class="article-right">
+							<h1>{{title}}</h1>
+							<p>{{content}}</p>
+							{{#if postDate}}
+								<small>Публикувано на <span class="date">{{postDate}}</span></small>
+							{{/if}}
+						</div>
 
+					</article>
+					{{/articles}}
+				</section>
+			</div>
+		</script>
+	</div>
 	<script src="libs/handlebars-v4.0.5.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
